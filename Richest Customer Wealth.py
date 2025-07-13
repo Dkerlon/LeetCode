@@ -22,6 +22,6 @@ print(exemplo.maximumWealth([[1,2,3],[3,2,1]]))
 """
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
-        return max([sum(acc) for acc in accounts])
+        return max([sum(acc) for acc in accounts])chat
 
 """
