@@ -1,24 +1,24 @@
-class Solution(object):
-    def longestPalindrome(self, s):
-        letras = {}
+class Solution():
+    def longest_palindrome(self,s):
+        tamanho = {}
         for letra in s:
-            if letra in letras:
-                letras[letra] +=1
+            if letra in tamanho:
+                tamanho[letra]+=1
             else:
-                letras[letra] = 1
-        tamanho = 0
+                tamanho[letra] = 1
         impar = False
-        for chave,valor in letras.items():
-            if valor % 2 == 0:
-                tamanho+=valor
-            else:
-                tamanho+=valor
-                if not impar:
-                    impar = True
-                else:
-                    tamanho -=1
-        return print(tamanho)
+        maior_palindromo =  0
 
-        
-teste = Solution()
-teste.longestPalindrome("aaaabbbbcccc")
+        for chave,valor in tamanho.items():
+            if valor / 2 == 0:
+                maior_palindromo+=valor
+            else:
+                impar == True
+                maior_palindromo+=valor
+
+                if impar:
+                    maior_palindromo-=1
+        print(maior_palindromo)
+
+exemplo = Solution()
+exemplo.longest_palindrome("lalaklalabla")
